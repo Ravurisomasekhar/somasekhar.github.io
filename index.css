@@ -1,4 +1,4 @@
-* {
+ * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -17,9 +17,21 @@ body {
 .About{
     display: flex;
     justify-content: space-between;
+    background-image: url('71+17bVYHxL._AC_UF1000\,1000_QL80_.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 50px 20px;
+    
+    
 }
 .about1 h2{
     font-size: 30px;
+    margin-top: 500px;
+}
+#about1 p{
+    margin-top: 150px;
+    font-size: 16px;
 }
 
 header {
@@ -27,12 +39,17 @@ header {
     color: #fff;
     padding: 1rem;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 85%;
+    z-index: 1000;
 }
-
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
+
 
 header nav ul li {
     display: inline;
@@ -50,6 +67,9 @@ header h1 {
 
 header p {
     margin: 0;
+}
+body {
+    padding-top: 120px;
 }
 
 section {
@@ -91,21 +111,65 @@ ul li {
 #about1 h2{
     font-size: 50px;
 }
-/* #about1 p{
+#about1 p{
     font-size: 30px;
-} */
+} 
 #about2 img{
     border-radius: 30%;
 }
+#skills {
+    background-image: url('pexels.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 50px 20px; 
+    color: #fff; 
+    border-radius: 8px; 
+}
+
 #skills h2{
     font-size: 50px;
+    color: black;
+    margin-left: 500px;
 }
 #skills ul li {
     font-size: 30px;
+    color: black;
+    margin-left: 520px;
 }
+#projects {
+    background-image: url('images.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 50px 20px; 
+    color: #101010; 
+    border-radius: 8px; 
+}
+
+
 #projects h2{
     font-size: 50px;
 }
+#contact {
+    background-image: url('download1.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 50px 20px; 
+     color: white;
+    border-radius: 8px; 
+}
+#resume {
+    background-image: url('pexels.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 50px 20px;
+   
+    border-radius: 8px;
+}
+
 #contact h2{
     font-size: 50px;
 }
@@ -147,20 +211,68 @@ footer {
 #resume a.download-button:hover {
     background-color: #0056b3;
 }
+/* .pgdrN{
+    display: flex;
+    justify-content: space-between;
+} */
+.blue-button {
+    display: inline-block;
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 0.5rem 1rem;
+    border: none; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    margin-top: 10px;
+    transition: background-color 0.3s ease; 
+    margin-left: 450px;
+    margin-bottom: 40px;
+}
 
- /* Responsive Design  */
+.blue-button:hover {
+    background-color: #0056b3;
+    
+}
+#bg{
+    background-image: url('maxresdefault.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 50px 20px;
+   
+    border-radius: 8px;
+}
 
-@media (max-width: 768px) {
+
+    /* Responsive Design */
+
+@media (max-width: 768px) { 
     header nav ul {
         text-align: center;
     }
+    header{
+        width: 700px;
+        margin-left: -30px;
+    }
+   #skills ul li{
+    margin-left: 240px;
+   }
+   #skills h2{
+    margin-left:5px;
+   }
 
     header nav ul li {
         display: block;
         margin: 0.5rem 0;
     }
-    .About{
+    
+    .About {
         display: block;
+        text-align: center; /* Center text for better readability */
+    }
+
+    #about1 {
+        margin-top: 20px; /* Adjust margin for mobile view */
     }
 
     section {
@@ -169,35 +281,62 @@ footer {
 
     section h2 {
         font-size: 1.5rem;
+        text-align: center; /* Center section headings */
     }
 
     .project {
         margin-bottom: 1.5rem;
-     }
+        text-align: center; /* Center project details */
+    }
+
+    .project h3 {
+        font-size: 1.2rem; /* Slightly increase font size for readability */
+    }
+    #contact p {
+            font-size: 12px;
+    }
+    #resume p{
+        font-size: 20px;
+    }
+    #pgdrN{
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
+    header{
+        margin-left: -3px;
+        width: 400px;
+    }
     header h1 {
         font-size: 1.5rem;
+    }
+    #skills ul li {
+        margin-left: 100px;
     }
 
     header p {
         font-size: 0.9rem;
     }
-    .About{
+
+    .About {
         display: block;
+        text-align: center; /* Center text for better readability */
     }
-    #about2 img{
-        width: 390px;
-        height: 390px;
-        margin-left: -10px;
+
+    #about2 img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: 0; /* Remove left margin */
     }
+
     section {
         padding: 1rem;
     }
 
     section h2 {
         font-size: 1.2rem;
+        text-align: center; /* Center section headings */
     }
 
     .project h3 {
@@ -207,4 +346,10 @@ footer {
     footer {
         padding: 0.5rem 0;
     }
-}  
+    
+    .blue-button {
+        margin-left: auto; /* Center button */
+        margin-right: auto; /* Center button */
+        display: block; /* Make button a block element */
+    }
+}
