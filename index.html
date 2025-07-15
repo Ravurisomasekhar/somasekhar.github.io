@@ -3,9 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css">
-   
+    <title>Portfolio - Ravuri SomaSekhar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 32px 40px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #0077b6;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #023e8a;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 16px 0 8px 0;
+            color: #023e8a;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .About {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        #about1 {
+            flex: 2;
+        }
+        #about2 img {
+            border-radius: 50%;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+        }
+        section {
+            margin-bottom: 32px;
+        }
+        h2 {
+            color: #0077b6;
+            font-size: 1.6em;
+            margin-bottom: 12px;
+        }
+        #skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            list-style: none;
+            padding: 0;
+        }
+        #skills li {
+            background: #e0f2fe;
+            color: #023e8a;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 1em;
+            min-width: 180px;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 900px) {
+            #skills ul {
+                gap: 12px;
+            }
+            #skills li {
+                min-width: 120px;
+                font-size: 0.95em;
+            }
+        }
+        @media (max-width: 700px) {
+            #skills ul {
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
+            }
+            #skills li {
+                min-width: 0;
+                width: 100%;
+                font-size: 0.95em;
+            }
+        }
+        @media (max-width: 600px) {
+            #skills ul {
+                flex-direction: column;
+                gap: 4px;
+                align-items: flex-start;
+            }
+            #skills li {
+                min-width: 0;
+                width: 100%;
+                font-size: 0.9em;
+                padding: 6px 10px;
+            }
+        }
+        .project {
+            background: #f1f3f6;
+            border-radius: 8px;
+            padding: 18px 24px;
+            margin-bottom: 18px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+        }
+        .project h3 {
+            margin-top: 0;
+            color: #023e8a;
+        }
+        .project a {
+            color: #0077b6;
+            text-decoration: underline;
+        }
+        #contact ul {
+            list-style: none;
+            padding: 0;
+        }
+        #contact li {
+            margin-bottom: 8px;
+        }
+        .download-button {
+            display: inline-block;
+            background: #0077b6;
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .download-button:hover {
+            background: #023e8a;
+        }
+        footer {
+            text-align: center;
+            color: #888;
+            font-size: 1em;
+            margin-top: 32px;
+        }
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 98%;
+                margin: 24px;
+                padding: 24px;
+            }
+        }
+        @media (max-width: 900px) {
+            .container {
+                max-width: 100%;
+                margin: 16px;
+                padding: 16px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            #about2 img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 8px 4px;
+            }
+            .About {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            #about2 img {
+                width: 100px;
+                height: 100px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+            .project {
+                padding: 10px 4px;
+            }
+            #skills ul {
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
+            }
+        }
+        @media (max-width: 600px) {
+            .container { padding: 2px 1px; }
+            .About {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+                align-items: center;
+                justify-content: center;
+            }
+            #about1 {
+                flex: 2 1 0;
+                min-width: 0;
+                text-align: left;
+            }
+            #about2 {
+                flex: 1 1 0;
+                min-width: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #about2 img { width: 50px; height: 50px; }
+            nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 4px;
+                align-items: center;
+                justify-content: center;
+            }
+            nav ul li {
+                flex: 1 1 auto;
+                min-width: 60px;
+                text-align: center;
+            }
+            h1 { font-size: 0.8em; }
+            h2 { font-size: 0.8em; }
+            .project { padding: 4px 1px; }
+            #skills ul { flex-direction: column; gap: 2px; align-items: flex-start; }
+            .download-button { padding: 6px 8px; font-size: 0.8em; }
+            section { margin-bottom: 16px; }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -25,58 +285,63 @@
     <div class="About">
     <section id="about1">
         <h2>ABOUT ME</h2>
-        <p>Hello! I'm <R class="Somasekhar"></R>, a passionate web developer with a love for creating beautiful and functional websites. I have experience in various web technologies and am always eager to learn new skills.</p>
+        <p>Hello! I'm <span class="Somasekhar">Somasekhar</span>, a passionate web developer with a love for creating beautiful and functional websites. I have experience in various web technologies and am always eager to learn new skills.</p>
     </section>
     <section id="about2">
-        <img src="SOMU_B.jpg" width="500px" height="500px">
+        <img src="SOMU_B.jpg" alt="Somasekhar Ravuri profile photo">
     </section>
 </div>
-    
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Bootstrap</li>
-            <li>Python</li>
+            <li><b>Script Languages:</b> HTML, CSS, Bootstrap</li>
+            <li><b>Tools:</b> Git, GitHub</li>
+            <li><b>Programming Language:</b> Python</li>
         </ul>
     </section>
-    
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project 1 </h3>
-            <p><b><a href="project.html" target="_blank">STOCK MARKET PREDICTION USING CNN-LSTM DATA</a></b></p>
-            <p>As part of this project, I built a Python framework that constructs datasets for various stocks using CNN-LSTM data feeds. This model applies fundamentals of stock markets using built-in algorithms and neural networks to predict market trends.</p>
+            <h3>Stock Market Prediction Using CNN-LSTM Data</h3>
+            <p><b><a href="project.html" target="_blank">View Project</a></b></p>
+            <p>Built a Python framework to construct datasets for various stocks using CNN-LSTM data feeds. The model applies fundamentals of stock markets using built-in algorithms and neural networks to predict market trends.</p>
         </div>
         <div class="project">
-            <h3>Project 2 </h3>
-            <p><b><a href="project.html" target="project.html">ANDROID TASK MONITORING</a></b></p>
-            <p>In today's fast-paced world, managing multiple tasks efficiently is crucial. An Android Task Monitoring app serves as a digital assistant, sending timely reminders to ensure you don’t miss important tasks like meetings, bill payments, or medication schedules.</p>
+            <h3>Android Task Monitoring</h3>
+            <p><b><a href="project.html" target="_blank">View Project</a></b></p>
+            <p>An Android Task Monitoring app serves as a digital assistant, sending timely reminders to ensure you don’t miss important tasks like meetings, bill payments, or medication schedules.</p>
         </div>
     </section>
-    
-    
     <section id="contact">
         <h2>Contact Me</h2>
         <p>If you have any questions or would like to collaborate on a project, feel free to reach out!</p>
-        <ul>
-            <li>Email: ravurisomasekhar@gmail.com</li>
-            <li>LinkedIn: <a href="#">https://linkedin.com/in/ravuri-somasekhar</a></li>
-            <li>GitHub: <a href="#">https://github.com/Ravurisomasekhar</a></li>
+        <ul style="display:flex;gap:16px;align-items:center;justify-content:flex-start;list-style:none;padding:0;margin:0;">
+            <li>
+                <a href="mailto:ravurisomasekhar@gmail.com" style="display:inline-flex;align-items:center;gap:8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail" style="width:24px;height:24px;vertical-align:middle;">
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/ravuri-somasekhar" target="_blank" style="display:inline-flex;align-items:center;gap:8px;">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Ravurisomasekhar" target="_blank" style="display:inline-flex;align-items:center;gap:8px;">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:24px;height:24px;vertical-align:middle;">
+                </a>
+            </li>
         </ul>
     </section>
-
     <section id="resume">
         <h2>Resume</h2>
         <p>Feel free to download my resume for more detailed information about my experience and skills.</p>
-        <a href="Somasekhar_Ravuri_Resume.pdf" download="Somasekhar_Ravuri_Resume" class="download-button">Download Resume</a>
+        <a href="Ravuri_Somasekhar_Resume..pdf" download="Ravuri_Somasekhar_Resume" class="download-button">Download Resume</a>
     </section>
-    
     <footer>
         <p>&copy; 2024 Ravuri Somasekhar. All rights reserved.</p>
     </footer>
 </div>
 </body>
-</html> 
+</html>
 
